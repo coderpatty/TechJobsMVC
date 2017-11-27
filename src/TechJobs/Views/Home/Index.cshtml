@@ -1,10 +1,15 @@
-﻿@{ 
+﻿<h1>@ViewBag.Title</h1>
+   
+@{
     ViewBag.Title = "Home";
 }
-<p>View jobs by:</p>
+<h1>@ViewBag.Title</h1>
+<h2>View All</h2>
 <ul>
-    @foreach (KeyValuePair<string, string> action in ViewBag.actions)
+    @foreach (KeyValuePair<string, string> column in ViewBag.columns)
     {
-        <li><a href="/@action.Key">@action.Value</a></li>
+        <li>
+            <a asp-controller="List" asp-action="Values" asp-route-column="@column.Key">@column.Value</a>
+        </li>
     }
 </ul>

@@ -2,6 +2,7 @@
 using System.IO;
 using System.Reflection;
 using System.Text;
+using System;
 
 namespace TechJobs.Models
 {
@@ -121,7 +122,7 @@ namespace TechJobs.Models
                     string[] rowArrray = CSVRowToStringArray(line);
                     if (rowArrray.Length > 0)
                     {
-                        rows.Add(rowArrray);
+                        rows.Add(rowArray);
                     }
                 }
             }
