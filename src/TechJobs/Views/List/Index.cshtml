@@ -11,11 +11,3 @@
     }
     
 </ul>
-     @foreach (KeyValuePair<string, string> column in ViewBag.columns)
-     {
-             < ul >
-                 < li >
-                     < a asp - controller = "List" asp - action = "Values" asp - route - column = "@column.Key" > @column.Value </ a >
-                          </ li >
-                      </ ul >
-     } 

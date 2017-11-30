@@ -3,13 +3,13 @@
 @{
     ViewBag.Title = "Home";
 }
-<h1>@ViewBag.Title</h1>
-<h2>View All</h2>
+
+<h2>View Jobs by:</h2>
 <ul>
-    @foreach (KeyValuePair<string, string> column in ViewBag.columns)
+    @foreach (KeyValuePair<string, string> action in ViewBag.actions)
     {
         <li>
-            <a asp-controller="List" asp-action="Values" asp-route-column="@column.Key">@column.Value</a>
+            <a asp-controller="@action.Key" asp-action="index">@action.Key</a>
         </li>
     }
 </ul>
